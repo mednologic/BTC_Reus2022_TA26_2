@@ -20,7 +20,7 @@ public class Cientifico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name = "id")
-	private String id;
+	private Long id;
 	@Column(name="dni")
 	private String dni;
 	@Column(name = "nombre_apels")
@@ -34,7 +34,7 @@ public class Cientifico {
 
 	}
 
-	public Cientifico(String id, String dni, String nombre_apels, List<AsignadoA> asignadoA) {
+	public Cientifico(Long id, String dni, String nombre_apels, List<AsignadoA> asignadoA) {
 
 		this.id = id;
 		this.nombre_apels = nombre_apels;
@@ -42,11 +42,11 @@ public class Cientifico {
 	}
 
 	// getters y setters
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

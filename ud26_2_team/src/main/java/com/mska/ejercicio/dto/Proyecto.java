@@ -18,7 +18,7 @@ public class Proyecto {
 	// atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private String id;
+	private Long id;
 	@Column(name = "nombre")
 	private String nombre;
 	@Column(name = "horas")
@@ -32,7 +32,7 @@ public class Proyecto {
 
 	}
 
-	public Proyecto(String id, String nombre, int horas, List<AsignadoA> asignadoA) {
+	public Proyecto(Long id, String nombre, int horas, List<AsignadoA> asignadoA) {
 
 		this.id = id;
 		this.nombre = nombre;
@@ -41,11 +41,11 @@ public class Proyecto {
 	}
 
 	// getters y setters
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
