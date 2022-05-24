@@ -35,11 +35,8 @@ public class ProyectoController {
 	}
 	
 	@GetMapping("/proyecto/{id}")
-	public List<Proyecto> listarProyectosXID(@PathVariable(name = "id") Long id){
-		
-		Proyecto proyecto = new Proyecto();
-		proyectoServiceImp.listarProyectoXID(id);
-		return null;
+	public Proyecto listarProyectosXID(@PathVariable(name = "id") Long id){	
+		return proyectoServiceImp.listarProyectoXID(id);
 	}
 	
 	@PutMapping("/proyecto/{id}")
@@ -59,6 +56,7 @@ public class ProyectoController {
 		return proyectoAct;
 		
 	}
+	
 	@DeleteMapping("/proyecto/{id}")
 	public void eliminarProyecto(@PathVariable(name = "id") Long id) {
 		proyectoServiceImp.eliminarProyecto(id);
