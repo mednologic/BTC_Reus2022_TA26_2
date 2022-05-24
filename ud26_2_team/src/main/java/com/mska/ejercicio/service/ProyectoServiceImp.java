@@ -16,32 +16,27 @@ public class ProyectoServiceImp implements IProyectoService{
 
 	@Override
 	public List<Proyecto> listarProyecto() {
-		// TODO Auto-generated method stub
-		return null;
+		return iProyectosDAO.findAll();
 	}
 
 	@Override
 	public Proyecto guardarProyecto(Proyecto proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		return iProyectosDAO.save(proyecto);
 	}
 
 	@Override
 	public Proyecto listarProyectoXID(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return iProyectosDAO.findById(id).get();
 	}
 
 	@Override
 	public Proyecto actualizarProyecto(Proyecto proyecto) {
-		// TODO Auto-generated method stub
-		return null;
+		return iProyectosDAO.save(proyecto);
 	}
 
 	@Override
 	public void eliminarProyecto(String id) {
-		// TODO Auto-generated method stub
+		iProyectosDAO.deleteById(id);
 		
 	}
-
 }

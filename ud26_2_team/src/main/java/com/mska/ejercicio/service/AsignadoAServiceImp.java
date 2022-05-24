@@ -15,35 +15,31 @@ public class AsignadoAServiceImp implements IAsignadoAService {
 
 	@Override
 	public List<AsignadoA> listarAsignadosA() {
-		// TODO Auto-generated method stub
-		return null;
+		return iAsignadosADAO.findAll();
 	}
 
 	@Override
 	public AsignadoA guardarAsignadosA(AsignadoA asignadoA) {
-		// TODO Auto-generated method stub
-		return null;
+		return iAsignadosADAO.save(asignadoA);
 	}
 
 	@Override
-	public AsignadoA listarAsignadosAXID(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public AsignadoA listarAsignadosAXID(Long id) {
+		return iAsignadosADAO.findById(id).get();
 	}
 
 	@Override
 	public AsignadoA actualizarAsignadosA(AsignadoA asignadoA) {
-		// TODO Auto-generated method stub
-		return null;
+		return iAsignadosADAO.save(asignadoA);
 	}
 
 	@Override
-	public void eliminarAsignadosA(String id) {
-		// TODO Auto-generated method stub
+	public void eliminarAsignadosA(Long id) {
+		iAsignadosADAO.deleteById(id);
 		
 	}
 
 	
-
+	
 }
 
