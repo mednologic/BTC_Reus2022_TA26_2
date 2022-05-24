@@ -50,7 +50,8 @@ public class CientificoController {
 		cientificoGetted = cientificoServiceImp.listarCientificoXID(id);
 
 		cientificoGetted.setId(cientifico.getId());
-		cientificoGetted.setNombre(cientifico.getNombre());
+		cientificoGetted.setDni(cientifico.getDni());
+		cientificoGetted.setNombre_apels(cientifico.getNombre_apels());
 
 		cientificoAct = cientificoServiceImp.actualizarCientifico(cientificoGetted);
 

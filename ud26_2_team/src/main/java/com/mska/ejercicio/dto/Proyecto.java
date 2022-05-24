@@ -17,6 +17,7 @@ public class Proyecto {
 
 	// atributos
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private String id;
 	@Column(name = "nombre")
 	private String nombre;

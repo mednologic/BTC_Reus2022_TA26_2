@@ -18,10 +18,13 @@ public class Cientifico {
 
 	// atributos
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	@Column(name = "id")
 	private String id;
-	@Column(name = "nombre")
-	private String nombre;
+	@Column(name="dni")
+	private String dni;
+	@Column(name = "nombre_apels")
+	private String nombre_apels;
 	@OneToMany
 	@JoinColumn(name = "id")
 	private List<AsignadoA> asignadoA;
@@ -31,10 +34,10 @@ public class Cientifico {
 
 	}
 
-	public Cientifico(String id, String nombre, List<AsignadoA> asignadoA) {
+	public Cientifico(String id, String dni, String nombre_apels, List<AsignadoA> asignadoA) {
 
 		this.id = id;
-		this.nombre = nombre;
+		this.nombre_apels = nombre_apels;
 		this.asignadoA = asignadoA;
 	}
 
@@ -47,12 +50,20 @@ public class Cientifico {
 		this.id = id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getDni() {
+		return dni;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public String getNombre_apels() {
+		return nombre_apels;
+	}
+
+	public void setNombre_apels(String nombre_apels) {
+		this.nombre_apels = nombre_apels;
 	}
 
 	@JsonIgnore
@@ -65,10 +76,9 @@ public class Cientifico {
 		this.asignadoA = asignadoA;
 	}
 
-	// método toString
 	@Override
 	public String toString() {
-		return "Cientifico [dni=" + id + ", nombre=" + nombre + "]";
+		return "Cientifico [id=" + id + ", dni=" + dni + ", nombre_apels=" + nombre_apels + ", asignadoA=" + asignadoA
+				+ "]";
 	}
-
 }
