@@ -19,19 +19,19 @@ public class ProyectoController {
 	ProyectoServiceImp proyectoServiceImp;
 
 	//Listar, Guardar, ListarXID, actualizar, eliminar
-	@GetMapping("/proyectos")
+	@GetMapping("/proyecto")
 	public List <Proyecto> listarProyectos(){
 		return proyectoServiceImp.listarProyecto();
 	};
 	
-	@PostMapping("/proyectos")
+	@PostMapping("/proyecto")
 	public Proyecto guardarProyecto(@RequestBody Proyecto proyecto) {
 		
 		return proyectoServiceImp.guardarProyecto(proyecto);
 		
 	}
 	
-	@GetMapping("/proyectos/{id}")
+	@GetMapping("/proyecto/{id}")
 	public List<Proyecto> listarProyectosXID(@PathVariable(name = "id") String id){
 		
 		Proyecto proyecto = new Proyecto();
@@ -39,7 +39,7 @@ public class ProyectoController {
 		return null;
 	}
 	
-	@PutMapping("/proyectos/{id}")
+	@PutMapping("/proyecto/{id}")
 	public Proyecto actualizarProyecto(@PathVariable(name = "id") String id, @RequestBody Proyecto proyecto) {
 		Proyecto proyectoGetted = new Proyecto();
 		Proyecto proyectoAct 	= new Proyecto();
@@ -56,7 +56,7 @@ public class ProyectoController {
 		return proyectoAct;
 		
 	}
-	@DeleteMapping("/proyectos/{id}")
+	@DeleteMapping("/proyecto/{id}")
 	public void eliminarProyecto(@PathVariable(name = "id") String id) {
 		proyectoServiceImp.eliminarProyecto(id);
 	}

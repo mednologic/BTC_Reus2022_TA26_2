@@ -22,19 +22,19 @@ public class AsignadoAController {
 	@Autowired
 	AsignadoAServiceImp asignadoAServiceImpl;
 
-	@GetMapping("/asignado")
+	@GetMapping("/asignado_a")
 	public List<AsignadoA> listarAsignadoAs() {
 		return asignadoAServiceImpl.listarAsignadosA();
 	}
 
-	@PostMapping("/asignado")
+	@PostMapping("/asignado_a")
 	public AsignadoA guardarAsignadoA(@RequestBody AsignadoA asignadoA) {
 
 		return asignadoAServiceImpl.guardarAsignadosA(asignadoA);
 	}
 
-	@GetMapping("/asignado/{id}")
-	public AsignadoA listarAsignadoAXID(@PathVariable(name = "id") String id) {
+	@GetMapping("/asignado_a/{id}")
+	public AsignadoA listarAsignadoAXID(@PathVariable(name = "id") Long id) {
 
 		AsignadoA asignadoAXID = new AsignadoA();
 		asignadoAXID = asignadoAServiceImpl.listarAsignadosAXID(id);
@@ -42,8 +42,8 @@ public class AsignadoAController {
 		return asignadoAXID;
 	}
 
-	@PutMapping("/asignado/{id}")
-	public AsignadoA actualizarAsignadoA(@PathVariable(name = "id") String id, @RequestBody AsignadoA asignadoA) {
+	@PutMapping("/asignado_a/{id}")
+	public AsignadoA actualizarAsignadoA(@PathVariable(name = "id") Long id, @RequestBody AsignadoA asignadoA) {
 		AsignadoA asignadoASeleccionado = new AsignadoA();
 		AsignadoA asignadoAActualizado = new AsignadoA();
 
@@ -57,8 +57,8 @@ public class AsignadoAController {
 		return asignadoAActualizado;
 	}
 
-	@DeleteMapping("/asignado/{id}")
-	public void eleiminarAsignadoA(@PathVariable(name = "id") String id) {
+	@DeleteMapping("/asignado_a/{id}")
+	public void eleiminarAsignadoA(@PathVariable(name = "id") Long id) {
 		asignadoAServiceImpl.eliminarAsignadosA(id);
 	}
 }
