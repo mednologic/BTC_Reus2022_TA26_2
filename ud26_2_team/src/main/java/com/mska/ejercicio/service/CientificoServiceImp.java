@@ -16,31 +16,27 @@ public class CientificoServiceImp implements ICientificoService{
 
 	@Override
 	public List<Cientifico> listarCientificos() {
-		// TODO Auto-generated method stub
-		return null;
+		return iCientificosDAO.findAll();
 	}
 
 	@Override
 	public Cientifico guardarCientifico(Cientifico cientifico) {
-		// TODO Auto-generated method stub
-		return null;
+		return iCientificosDAO.save(cientifico);
 	}
 
 	@Override
 	public Cientifico listarCientificoXID(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return iCientificosDAO.findById(id).get();
 	}
 
 	@Override
 	public Cientifico actualizarCientifico(Cientifico cientifico) {
-		// TODO Auto-generated method stub
-		return null;
+		return iCientificosDAO.save(cientifico);
 	}
 
 	@Override
 	public void eliminarCientifico(String id) {
-		// TODO Auto-generated method stub
+		iCientificosDAO.deleteById(id);
 		
 	}
 

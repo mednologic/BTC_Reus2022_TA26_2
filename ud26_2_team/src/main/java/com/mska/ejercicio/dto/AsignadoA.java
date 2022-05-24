@@ -15,7 +15,7 @@ public class AsignadoA {
 	// atributos
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private int id;
+	private Long id;
 	@ManyToOne
 	@JoinColumn(name = "cientifico")
 	Cientifico cientifico;
@@ -28,7 +28,7 @@ public class AsignadoA {
 		
 	}
 
-	public AsignadoA(int id, Cientifico cientifico, Proyecto proyecto) {
+	public AsignadoA(Long id, Cientifico cientifico, Proyecto proyecto) {
 		
 		this.id = id;
 		this.cientifico = cientifico;
@@ -36,11 +36,11 @@ public class AsignadoA {
 	}
 
 	// getters y setters
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
