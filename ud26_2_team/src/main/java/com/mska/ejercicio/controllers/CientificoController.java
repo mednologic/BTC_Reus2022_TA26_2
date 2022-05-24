@@ -34,7 +34,7 @@ public class CientificoController {
 	}
 
 	@GetMapping("/cientifico/{id}") 
-	public Cientifico listarCientificoXID(@PathVariable(name = "id") String id) {
+	public Cientifico listarCientificoXID(@PathVariable(name = "id") Long id) {
 
 		Cientifico cientificoPorId = new Cientifico();
 		cientificoPorId = cientificoServiceImp.listarCientificoXID(id);
@@ -43,7 +43,7 @@ public class CientificoController {
 	}
 
 	@PutMapping("/cientifico/{id}") 
-	public Cientifico actualizarCientifico(@PathVariable(name = "id") String id, @RequestBody Cientifico cientifico) {
+	public Cientifico actualizarCientifico(@PathVariable(name = "id") Long id, @RequestBody Cientifico cientifico) {
 		Cientifico cientificoGetted = new Cientifico();
 		Cientifico cientificoAct = new Cientifico();
 
@@ -59,8 +59,8 @@ public class CientificoController {
 	}
 
 	@DeleteMapping("/cientifico/{id}") 
-	public void eliminarCientifico(@PathVariable(name = "id") String dni) {
-		cientificoServiceImp.eliminarCientifico(dni);
+	public void eliminarCientifico(@PathVariable(name = "id") Long id) {
+		cientificoServiceImp.eliminarCientifico(id);
 	}
 
 }

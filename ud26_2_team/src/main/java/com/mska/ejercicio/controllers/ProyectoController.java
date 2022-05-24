@@ -35,7 +35,7 @@ public class ProyectoController {
 	}
 	
 	@GetMapping("/proyecto/{id}")
-	public List<Proyecto> listarProyectosXID(@PathVariable(name = "id") String id){
+	public List<Proyecto> listarProyectosXID(@PathVariable(name = "id") Long id){
 		
 		Proyecto proyecto = new Proyecto();
 		proyectoServiceImp.listarProyectoXID(id);
@@ -43,7 +43,7 @@ public class ProyectoController {
 	}
 	
 	@PutMapping("/proyecto/{id}")
-	public Proyecto actualizarProyecto(@PathVariable(name = "id") String id, @RequestBody Proyecto proyecto) {
+	public Proyecto actualizarProyecto(@PathVariable(name = "id") Long id, @RequestBody Proyecto proyecto) {
 		Proyecto proyectoGetted = new Proyecto();
 		Proyecto proyectoAct 	= new Proyecto();
 		
@@ -60,7 +60,7 @@ public class ProyectoController {
 		
 	}
 	@DeleteMapping("/proyecto/{id}")
-	public void eliminarProyecto(@PathVariable(name = "id") String id) {
+	public void eliminarProyecto(@PathVariable(name = "id") Long id) {
 		proyectoServiceImp.eliminarProyecto(id);
 	}
 

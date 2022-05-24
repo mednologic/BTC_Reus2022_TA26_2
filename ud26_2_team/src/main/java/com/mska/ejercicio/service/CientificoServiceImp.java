@@ -25,7 +25,7 @@ public class CientificoServiceImp implements ICientificoService{
 	}
 
 	@Override
-	public Cientifico listarCientificoXID(String id) {
+	public Cientifico listarCientificoXID(Long id) {
 		return iCientificosDAO.findById(id).get();
 	}
 
@@ -35,7 +35,7 @@ public class CientificoServiceImp implements ICientificoService{
 	}
 
 	@Override
-	public void eliminarCientifico(String id) {
+	public void eliminarCientifico(Long id) {
 		iCientificosDAO.deleteById(id);
 		
 	}

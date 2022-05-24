@@ -25,7 +25,7 @@ public class ProyectoServiceImp implements IProyectoService{
 	}
 
 	@Override
-	public Proyecto listarProyectoXID(String id) {
+	public Proyecto listarProyectoXID(Long id) {
 		return iProyectosDAO.findById(id).get();
 	}
 
@@ -35,7 +35,7 @@ public class ProyectoServiceImp implements IProyectoService{
 	}
 
 	@Override
-	public void eliminarProyecto(String id) {
+	public void eliminarProyecto(Long id) {
 		iProyectosDAO.deleteById(id);
 		
 	}

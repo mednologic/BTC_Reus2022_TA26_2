@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.mska.ejercicio.dto.Cientifico;
 
-public interface ICientificosDAO extends JpaRepository<Cientifico, String>{
+public interface ICientificosDAO extends JpaRepository<Cientifico, Long>{
 
 }

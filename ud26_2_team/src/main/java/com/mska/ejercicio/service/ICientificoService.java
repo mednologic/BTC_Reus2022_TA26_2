@@ -10,10 +10,10 @@ public interface ICientificoService {
 
 	public Cientifico guardarCientifico(Cientifico cientifico);
 
-	public Cientifico listarCientificoXID(String id);
+	public Cientifico listarCientificoXID(Long id);
 
 	public Cientifico actualizarCientifico(Cientifico cientifico);
 
-	public void eliminarCientifico(String id);
+	public void eliminarCientifico(Long id);
 
 }

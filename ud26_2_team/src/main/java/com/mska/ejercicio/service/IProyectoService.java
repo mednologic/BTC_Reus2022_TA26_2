@@ -10,10 +10,10 @@ public interface IProyectoService {
 
 	public Proyecto guardarProyecto(Proyecto proyecto);
 
-	public Proyecto listarProyectoXID(String id);
+	public Proyecto listarProyectoXID(Long id);
 
 	public Proyecto actualizarProyecto(Proyecto proyecto);
 
-	public void eliminarProyecto(String id);
+	public void eliminarProyecto(Long id);
 
 }
